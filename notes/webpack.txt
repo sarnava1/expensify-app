@@ -1,0 +1,8 @@
+Its main purpose is to bundle JavaScript files for usage in a browser, yet it is also
+capable of transforming, bundling, or packaging just about any resource or asset.
+
+Actually it is a file in the public folder called bundle.js which is present 
+along with the index.html file which has the links to all the scripts which are required
+for the app to run. It is a single file which is created and which keeps tracks of all the 
+dependencies and requirements of the app.
+
