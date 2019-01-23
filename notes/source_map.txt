@@ -1,0 +1,2 @@
+it is included in the webpack config file wherein we define the devtool where we give the attribute.
+it helps us in debugging the code if there is any error.
