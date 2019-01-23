@@ -14,3 +14,7 @@ We shall then run the project by:
 
 yarn run serve for the live server 
 yarn run build for the babel build
+
+inside package.json only serve and build will be defined till now. till now as in we 
+have not installed web pack till now. for build we will use that long big thing in the 
+scripts object inside package.json
