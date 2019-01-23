@@ -7,3 +7,9 @@ for the app to run. It is a single file which is created and which keeps tracks 
 dependencies and requirements of the app.
 
 See video lecture 47 and from there webpack portion starts.
+
+after installing webpack we need to change the scripts object in the package.json file.
+the previous build will be replaced by :
+build: webpack --watch
+webpack can run babel on its own but just including webpack in the package.json file will 
+not do any good as we have to write the webpack.config.js file too.
