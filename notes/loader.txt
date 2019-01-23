@@ -1,0 +1,10 @@
+a loader lets us customise the behaviour of webpack when it sees a certain type of file.
+
+We will be using the babel-loader for making webpack run babel on all the js files that will 
+be added or modified during our work.
+
+For doing that we have to include the rules in webpack.config file. also in the 
+package.json file we can get rid of defining the presets of babel and we will write the 
+presets of babel in another file known .babelrc which is json file for babel.
+
+we will be adding loader for scss later on
