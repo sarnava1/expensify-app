@@ -6,3 +6,4 @@ along with the index.html file which has the links to all the scripts which are 
 for the app to run. It is a single file which is created and which keeps tracks of all the 
 dependencies and requirements of the app.
 
+See video lecture 47 and from there webpack portion starts.

@@ -1,0 +1,16 @@
+There should be no use of global modules. We should only use local modules and 
+no global modules. We shall remove global modules like:
+
+yarn global remove babel-cli
+
+We shall add local modules like:
+
+yarn add babel-cli
+
+To use the local modules of live-server and babel-cli in the project we have to include them 
+in the scripts object of the package.json file
+
+We shall then run the project by:
+
+yarn run serve for the live server 
+yarn run build for the babel build
