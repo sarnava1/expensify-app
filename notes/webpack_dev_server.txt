@@ -1,0 +1,8 @@
+this is a server like live-server.
+
+live-server is a generic server. webpack-dev-server is a more better option for babel
+
+contentBase tells the web server where our public folder lives
+
+then do yarn run dev-server for running the app
+
