@@ -1,0 +1,15 @@
+webpack can run babel for us
+
+install webpack first
+yarn add webpack
+
+we have to first tell webpack what is the entry path to the project is..for us it is the app 
+file in the src folder and we have to also specify the output file wherein all our js
+will be.
+
+every config is mentioned in the webpack.config.js file. the output file has been named
+as bundle.js. Also __dirname gives us the complete path of the directory where we are in now 
+and path.join is a node function which helps us to join paths. 
+
+
+
