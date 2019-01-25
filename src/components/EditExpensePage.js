@@ -1,12 +1,12 @@
 import React from 'react';
 
-const AddExpensePage = () => (
+const EditExpensePage = () => (
     <div>
-       This is from add expense page
+       This is from edit expense page
     </div>
 );
 
-export default AddExpensePage;
+export default EditExpensePage;
 
 
 
