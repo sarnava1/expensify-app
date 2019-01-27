@@ -6,7 +6,7 @@ const book= {
   }
 };
 
-const {name: publisherName='self-published'} = book.publisher;
+const {name: publisherName='self-published'} = book.publisher.name;
 
 console.log(publisherName);
 
