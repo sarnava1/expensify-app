@@ -11,11 +11,22 @@ const expensesReducer = (state= expensesReducerDefaultState, action) => {
      switch(action.type){
          case 'ADD_EXPENSE':
             return [
-                ...state,
+                ...state, 
                 action.expense
             ];
          case 'REMOVE_EXPENSE':
             return state.filter(({ id }) => id !== action.id);
+         case 'EDIT_EXPENSE':
+            return state.map( ( expense ) => {
+                if(expense.id === action.id){
+                    return {
+                        ...expense,
+                        ...action.updates
+                    }
+                }else{
+                    return expense;
+                }
+            });
          default:
             return state;
      }
@@ -32,7 +43,12 @@ const filtersReducerDefaultState = {
 
 const filterReducer = (state= filtersReducerDefaultState, action ) => {
    switch (action.type) {
-       default:
+      case 'SET_TEXT_FILTER':
+         return  {
+             ...state,
+             text: action.text
+         }
+      default:
          return state;
    }
 };
@@ -52,9 +68,24 @@ const addExpense = (
          id: uuid(),
          description,
          amount,
-         createdAt
+         createdAt 
      }
 });
+
+//SET_TEXT_FILTER
+
+const setTextFilter = (text = '') => ({
+   type: 'SET_TEXT_FILTER',
+   text
+});
+
+// EDIT EXPENSE
+const editExpense = ( id , updates ) => ({
+    typeof: 'EDIT_EXPENSE',
+    id,
+    updates
+}); 
+
 
 //REMOVE EXPENSE
 
@@ -77,10 +108,14 @@ store.subscribe(() => {
  });
  
 const expenseOne= store.dispatch(addExpense({ description: 'rent', amount: 100}));
-store.dispatch(addExpense({ description: 'coffee', amount: 300}));
-console.log(expenseOne);
-store.dispatch(removeExpense({ id: expenseOne.expense.id }));
+const expenseTwo= store.dispatch(addExpense({ description: 'coffee', amount: 300}));
 
+console.log(expenseOne);
+
+store.dispatch(removeExpense({ id: expenseOne.expense.id }));
+// store.dispatch(editExpense( expenseTwo.expense.id , {amount:500} ));
+store.dispatch(setTextFilter('rent'));
+store.dispatch(setTextFilter());
 
 
 // const demoState = {
